@@ -1,0 +1,2 @@
+# keil2sdcc
+Python实现的脚本将Keil头文件的C51特殊语句转为SDCC的宏
