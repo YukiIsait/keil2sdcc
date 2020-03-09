@@ -1,7 +1,7 @@
 # encode: utf-8
 import re
 
-class FormatConversion:
+class FormatConverter:
     def __init__(self, text: str):
         self.__text: str = text
         self.__sfr_symbol_dict: dict = {}
@@ -37,6 +37,6 @@ if __name__ == "__main__":
     NEW_HEAD_FILE_NAME = "STC15F_NEW.H"
 
     with open(KEIL_HEAD_FILE_NAME, "r", encoding="GB18030") as rf:
-        fc = FormatConversion(rf.read())
+        fc = FormatConverter(rf.read())
         with open(NEW_HEAD_FILE_NAME, "w", encoding="UTF-8") as wf:
             wf.write(fc.get_text())
